@@ -45,4 +45,4 @@ if input("Посмотреть полученый АВР? (y/n)") == "y":
     if os.name == "posix":
         os.system(f"libreoffice --calc avr_to_{index}.xlsx")
     elif os.name == "nt":
-        os.system("avr_to_{index}.xlsx")
+        os.system(f"avr_to_{index}.xlsx")
