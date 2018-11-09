@@ -28,7 +28,7 @@ sheet_in = wb_in.worksheets[0]
 sheet_out = wb_out.worksheets[0]
 # в цикле по количеству строк выводим нужные значения
 s_in = 1
-s_out = 12
+s_out = 10
 for i in range(sheet_in.max_row - 1):
     s_in += 1
     model = re.sub(r'[(].*[)]', '', sheet_in['K' + str(s_in)].value)
@@ -38,7 +38,7 @@ for i in range(sheet_in.max_row - 1):
     sheet_out["E" + str(s_out)].value = serial
     sheet_out["I" + str(s_out)].value = "Плановое техническое обслуживание"
     s_out += 1
-sheet_out["E8"].value = f"ОПС {index}"
+sheet_out["E6"].value = f"ОПС {index}"
 wb_out.save(f"avr_to_{index}.xlsx")
 clear_str()
 if input("Посмотреть полученый АВР? (y/n)") == "y":
