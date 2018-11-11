@@ -46,7 +46,7 @@ try:
     tree = html.fromstring(response.text)
     address  = tree.xpath("//center/table/tr[1]/td/table/tr[6]/td[2]")[0].text_content()
     address = address.replace('\r', '').replace('\n', '').split(",")
-    sheet_out["E6"].value = f"{address[2]}, {address[0]}, {address[1]}"    
+    sheet_out["E6"].value = f"ОПС {index}, {address[2]}, {address[0]}, {address[1]}"
 except:
     sheet_out["E6"].value = f"ОПС {index}"
 
