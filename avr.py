@@ -27,6 +27,7 @@ wb_out = openpyxl.load_workbook("template.xlsx")
 # выбираем первый лист экселевской книги
 sheet_in = wb_in.worksheets[0]
 sheet_out = wb_out.worksheets[0]
+
 # в цикле по количеству строк выводим нужные значения
 s_in = 1
 s_out = 10
