@@ -4,11 +4,9 @@ import re
 import requests
 from lxml import html
 
-pth = os.getcwd()
-os.chdir(pth)
+os.chdir(os.getcwd()) # определяем путь к программе
 
-
-def clear_str():
+def clear_str(): # чистим командную строку
     if os.name == "posix":
         os.system("clear")
     elif os.name == "nt":
@@ -67,5 +65,6 @@ def avr():
 while True:
     if input("Создать новый АВР? ") == "y":
         avr()
+        clear_str()
     else:
         break
